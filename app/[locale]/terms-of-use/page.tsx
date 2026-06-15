@@ -1,10 +1,17 @@
 import { LocaleProps } from "@/types/Index";
+
+export const runtime = "edge";
+
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import { unstable_setRequestLocale } from "next-intl/server";
 import Breadcrumb from "@/app/components/Breadcrumb";
+
+export async function generateStaticParams() {
+  return [{ locale: 'en' }];
+}
 
 export const metadata: Metadata = {
   title: "Terms of Use - Sprunki Pyramixed Games",

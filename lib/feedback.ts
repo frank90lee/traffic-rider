@@ -25,6 +25,24 @@ interface FeedbackMeta {
 }
 
 export async function createFeedback(feedback: FeedbackData) {
+  // Cloudflare Pages doesn't support fs at runtime
+  if (process.env.NEXT_RUNTIME === 'edge' || !fs.writeFileSync) {
+    console.warn('Feedback submission is not supported on Edge runtime');
+    return {
+      id: `mock-${Date.now()}`,
+      title: feedback.title,
+      status: 'open',
+      date: new Date().toISOString(),
+      lastModified: new Date().toISOString(),
+      path: '',
+      category: feedback.category,
+      author: {
+        name: feedback.name,
+        email: feedback.email
+      }
+    };
+  }
+
   // 1. 生成唯一ID
   const id = `feedback-${Date.now()}`
   
@@ -72,11 +90,17 @@ export async function createFeedback(feedback: FeedbackData) {
 
 export function getFeedbackList(): FeedbackMeta[] {
   const indexPath = path.join(process.cwd(), 'data', 'json', 'feedback.json')
+  if (process.env.NEXT_RUNTIME === 'edge' || !fs.readFileSync) {
+    return [];
+  }
   return JSON.parse(fs.readFileSync(indexPath, 'utf8'))
 }
 
 export function getFeedbackDetail(id: string) {
   const mdPath = path.join(process.cwd(), 'data', 'feedback', `${id}.md`)
+  if (process.env.NEXT_RUNTIME === 'edge' || !fs.readFileSync) {
+    return null;
+  }
   const fileContent = fs.readFileSync(mdPath, 'utf8')
   const { data, content } = matter(fileContent)
   

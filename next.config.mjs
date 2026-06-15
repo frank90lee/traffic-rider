@@ -1,8 +1,4 @@
 import createNextIntlPlugin from 'next-intl/plugin';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
@@ -10,6 +6,16 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 const nextConfig = {
     trailingSlash: true,  // 强制所有页面使用尾部斜杠
     output: 'standalone', // 兼容 Cloudflare 等 serverless 环境
+    webpack: (config, { isServer }) => {
+      if (isServer) {
+        config.resolve.fallback = {
+          ...config.resolve.fallback,
+          fs: false,
+          path: false,
+        };
+      }
+      return config;
+    },
     headers: async () => {
       return [
         {

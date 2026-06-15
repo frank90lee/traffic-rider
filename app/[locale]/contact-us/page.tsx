@@ -1,4 +1,7 @@
 import React from 'react';
+
+export const runtime = "edge";
+
 import { Metadata } from 'next'
 import FeedbackForm from '@/app/components/FeedbackForm';
 import Header from '@/app/components/Header';
@@ -8,6 +11,9 @@ import Footer from "@/app/components/Footer";
 import { unstable_setRequestLocale } from "next-intl/server";
 import Breadcrumb from "@/app/components/Breadcrumb";
 
+export async function generateStaticParams() {
+  return [{ locale: 'en' }];
+}
 
 export const metadata: Metadata = {
   title: 'Contact Us - Sprunki Pyramixed Games',

@@ -7,11 +7,20 @@ import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import React from "react";
+
+export const runtime = "edge";
+
 import GitalkComponent from "@/app/components/GitalkComponent";
 import ShareButtons from "@/app/components/ShareButtons";
 import GameLinks from "@/app/components/GameLinks";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import * as LucideIcons from "lucide-react";
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'en', slug: 'traffic-rider' }
+  ];
+}
 
 interface Props {
   params: {

@@ -1,4 +1,7 @@
 import { NextResponse } from 'next/server'
+
+export const runtime = "edge";
+
 import { createFeedback, getFeedbackList, getFeedbackDetail } from '@/lib/feedback'
 
 export async function POST(request: Request) {

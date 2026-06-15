@@ -7,8 +7,15 @@ import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import React from "react";
+
+export const runtime = "edge";
+
 import ShareButtons from "@/app/components/ShareButtons";
 import * as LucideIcons from "lucide-react";
+
+export async function generateStaticParams() {
+  return [{ locale: 'en' }];
+}
 
 export async function generateMetadata({
   params: { locale },

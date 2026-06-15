@@ -5,9 +5,13 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import { PostData } from '@/types/Index'
 
-const postsDirectory = path.join(process.cwd(), 'data', 'md')
+const getPostsDirectory = () => path.join(process.cwd(), 'data', 'md')
 
 export function getSortedPostsData() {
+  if (process.env.NEXT_RUNTIME === 'edge' || !fs.readdirSync) {
+    return [];
+  }
+  const postsDirectory = getPostsDirectory()
   // Get file names under /data/md
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.filter(fileName => fileName.endsWith('.md')).map((fileName) => {
@@ -40,6 +44,16 @@ export function getSortedPostsData() {
 }
 
 export async function getPostData(locale: string, slug: string): Promise<PostData> {
+  if (process.env.NEXT_RUNTIME === 'edge' || !fs.readFileSync) {
+    // Return a default object if fs is not available
+    return {
+      slug,
+      contentHtml: '',
+      title: 'Default Title',
+      description: 'Default Description',
+    } as PostData;
+  }
+  const postsDirectory = getPostsDirectory();
   const fullPath = path.join(postsDirectory, locale, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -63,6 +77,10 @@ export async function getPostData(locale: string, slug: string): Promise<PostDat
 }
 
 export async function getPostData2(id: string) {
+  if (process.env.NEXT_RUNTIME === 'edge' || !fs.readFileSync) {
+    return { id, contentHtml: '' };
+  }
+  const postsDirectory = getPostsDirectory()
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
