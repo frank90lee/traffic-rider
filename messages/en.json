@@ -1,0 +1,56 @@
+{
+  "Index": {
+    "nav": {
+      "items": [
+        {
+          "title": "Bikes",
+          "link": "/#bikes"
+        },
+        {
+          "title": "Strategies",
+          "link": "/#strategies"
+        },
+        {
+          "title": "FAQ",
+          "link": "/#faq"
+        }
+      ]
+    },
+    "header": {
+      "title": "Traffic Rider Online"
+    },
+    "footer": {
+      "title": "Traffic Rider Online",
+      "description": "The ultimate destination for Traffic Rider fans. Experience high-speed motorcycle racing, master advanced pro strategies, and unlock the fastest bikes in the world. No downloads required, play free in your browser.",
+      "connect": "Language",
+      "copyright": "© 2026 Traffic Rider Online. Game developed by SK Games. All rights reserved.",
+      "sections": {
+        "modes": {
+          "title": "Game Modes",
+          "items": [
+            { "title": "Career Mode", "link": "/#modes" },
+            { "title": "Endless Mode", "link": "/#modes" },
+            { "title": "Time Trial", "link": "/#modes" },
+            { "title": "Free Ride", "link": "/#modes" }
+          ]
+        },
+        "guides": {
+          "title": "Rider Guides",
+          "items": [
+            { "title": "Pro Strategies", "link": "/#strategies" },
+            { "title": "Bike List", "link": "/#bikes" },
+            { "title": "Quick Start", "link": "/#steps" }
+          ]
+        },
+        "legal": {
+          "title": "Legal",
+          "items": [
+            { "title": "Privacy Policy", "link": "/privacy-policy/" },
+            { "title": "Terms of Service", "link": "/terms-of-use/" },
+            { "title": "Contact Us", "link": "/contact-us/" }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: *
+Disallow: /*/privacy-policy
+Disallow: /*/terms-of-use
+
+# Host
+Host: https://traffic-rider.org/
+
+# Sitemaps
+Sitemap: https://traffic-rider.org/sitemap.xml

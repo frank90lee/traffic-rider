@@ -1,0 +1,226 @@
+import Footer from "@/app/components/Footer";
+import Game from "@/app/components/Game";
+import Header from "@/app/components/Header";
+import { getPostData } from "@/lib/posts";
+import { PageContentProps } from "@/types/Index";
+import { Metadata } from "next";
+import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
+import React from "react";
+import GitalkComponent from "@/app/components/GitalkComponent";
+import ShareButtons from "@/app/components/ShareButtons";
+import GameLinks from "@/app/components/GameLinks";
+import Breadcrumb from "@/app/components/Breadcrumb";
+import * as LucideIcons from "lucide-react";
+
+interface Props {
+  params: {
+    locale: string;
+    slug: string;
+  };
+}
+
+export async function generateMetadata({
+  params: { locale, slug },
+}: Props): Promise<Metadata> {
+  const postData = await getPostData(locale, slug);
+  const canonicalLocale = locale === "en" ? "" : `/${locale}`;
+  return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"),
+    title: postData.title,
+    description: postData.description,
+    alternates: {
+      canonical: `${canonicalLocale}/${slug}/`,
+    },
+  };
+}
+
+function PageContent({ postData, locale }: PageContentProps) {
+  const index = useTranslations("Index");
+  const title = postData.title;
+  const name = postData.name || postData.title;
+  const gameSlug = postData.slug;
+  
+  return (
+    <div className="bg-slate-50 min-h-screen">
+      <Header t={index} showNavItems={false} />
+      <main className="max-w-7xl mx-auto p-4 md:py-8">
+        <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex-1 space-y-6">
+            {/* Game Card */}
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+              {postData.gameSrc && (
+                <div className="aspect-video w-full bg-black">
+                  <Game 
+                    src={postData.gameSrc} 
+                    title={name} 
+                  />
+                </div>
+              )}
+              <div className="p-4 md:p-6 flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center gap-2">
+                  <LucideIcons.Gamepad2 className="text-purple-600" size={24} />
+                  <h1 className="text-2xl font-bold text-slate-900">{name}</h1>
+                </div>
+                <ShareButtons 
+                  url={`${process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"}${locale === 'en' ? '' : locale + '/'}${gameSlug}/`} 
+                  title={title} 
+                />
+              </div>
+            </div>
+
+            {/* Tags */}
+            {postData.tags && postData.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {postData.tags.map((tag, idx) => (
+                  <span key={idx} className="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-600 flex items-center gap-1">
+                    <LucideIcons.Tag size={12} />
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <Breadcrumb items={[{ label: name }]} />
+
+            {/* Features Module */}
+            {postData.features && postData.features.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {postData.features.map((feature, idx) => {
+                  const iconName = feature.icon as keyof typeof LucideIcons;
+                  const Icon = LucideIcons[iconName] as LucideIcons.LucideIcon;
+                  
+                  return (
+                    <div key={idx} className="p-5 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-purple-200 transition-colors">
+                      <div className="flex items-start gap-4">
+                        {Icon && (
+                          <div className="p-2.5 bg-purple-50 rounded-lg text-purple-600">
+                            <Icon size={20} />
+                          </div>
+                        )}
+                        <div>
+                          <h3 className="font-bold text-slate-900 mb-1">{feature.title}</h3>
+                          <p className="text-sm text-slate-500 leading-relaxed">{feature.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Steps Module */}
+            {postData.steps && postData.steps.length > 0 && (
+              <div className="space-y-6">
+                <div className="flex items-center gap-2 text-xl font-bold text-slate-900">
+                  <LucideIcons.ListChecks className="text-purple-600" />
+                  <h2>How to Play {name}</h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {postData.steps.map((step, idx) => (
+                    <div key={idx} className="relative p-6 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden group">
+                      <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span className="text-6xl font-black text-slate-900">{idx + 1}</span>
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-900 mb-4 relative z-10 flex items-center gap-2">
+                        <span className="flex items-center justify-center w-6 h-6 bg-purple-600 text-white text-xs rounded-full">
+                          {idx + 1}
+                        </span>
+                        {step.title}
+                      </h3>
+                      <ul className="space-y-3 relative z-10">
+                        {step.items.map((item, iIdx) => (
+                          <li key={iIdx} className="text-sm text-slate-600 flex items-start gap-2">
+                            <LucideIcons.CheckCircle2 className="text-green-500 mt-0.5 shrink-0" size={14} />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Main Content Area */}
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
+              <article
+                className="prose max-w-none prose-slate prose-headings:text-slate-900 prose-p:text-slate-600 prose-a:text-purple-600 prose-img:rounded-xl prose-img:shadow-lg prose-img:mx-auto prose-li:text-slate-600"
+                dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+              />
+            </div>
+
+            {/* FAQ Module */}
+            {postData.faq && postData.faq.length > 0 && (
+              <>
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      "mainEntity": postData.faq.map((item) => ({
+                        "@type": "Question",
+                        "name": item.question,
+                        "acceptedAnswer": {
+                          "@type": "Answer",
+                          "text": item.answer,
+                        },
+                      })),
+                    }),
+                  }}
+                />
+                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
+                  <div className="flex items-center gap-2 mb-6 text-xl font-bold text-slate-900">
+                    <LucideIcons.HelpCircle className="text-purple-600" />
+                    <h2>Frequently Asked Questions</h2>
+                  </div>
+                  <div className="space-y-4">
+                    {postData.faq.map((item, idx) => (
+                      <div key={idx} className="border-b border-slate-100 last:border-0 pb-4 last:pb-0">
+                        <h3 className="font-bold text-slate-900 mb-2 flex items-start gap-2">
+                          <span className="text-purple-500">Q:</span>
+                          {item.question}
+                        </h3>
+                        <p className="text-slate-600 pl-6 relative">
+                          <span className="absolute left-0 text-slate-300 font-bold">A:</span>
+                          {item.answer}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Sidebar */}
+          <aside className="w-full lg:w-80 space-y-6">
+            <div className="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 sticky top-24">
+              <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
+                <LucideIcons.Gamepad className="text-purple-600" size={20} />
+                <h3>Recommended Games</h3>
+              </div>
+              <GameLinks locale={locale} excludeId={gameSlug} />
+              
+              <div className="mt-8">
+                <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
+                  <LucideIcons.MessageSquare className="text-purple-600" size={20} />
+                  <h3>Community Comments</h3>
+                </div>
+                <GitalkComponent title={name} id={gameSlug} />
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+      <Footer t={index} />
+    </div>
+  );
+}
+
+export default async function Page({ params: { locale, slug } }: Props) {
+  unstable_setRequestLocale(locale);
+  const postData = await getPostData(locale, slug);
+  return <PageContent postData={postData} locale={locale} />;
+}

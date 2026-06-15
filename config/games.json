@@ -1,0 +1,71 @@
+{
+  "games": [
+    {
+      "id": "sprunki-phase-1-7",
+      "title": "Sprunki Phase 1.7",
+      "image": "/game/sprunki-phase-1-7-icon.jpg",
+      "url": "/sprunki-phase-1-7/"
+    },
+    {
+      "id": "pyramixed-0-9",
+      "title": "Sprunki Pyramixed 0.9",
+      "image": "/game/sprunki-pyramixed-0-9-icon.jpg",
+      "url": "/sprunki-pyramixed-0-9/"
+    },
+    {
+      "id": "pyramix",
+      "title": "Sprunki Pyramix",
+      "image": "/game/sprunki-pyramix-icon.jpg",
+      "url": "/sprunki-pyramix/"
+    },
+    {
+      "id": "pyramixed-mod",
+      "title": "Sprunki Pyramixed Mod",
+      "image": "/game/sprunki-pyramixed-mod-icon.jpg",
+      "url": "/sprunki-pyramixed-mod/"
+    },
+    {
+      "id": "pyraminx",
+      "title": "Sprunki Pyraminx",
+      "image": "/game/sprunki-pyraminx-icon.jpg",
+      "url": "/sprunki-pyraminx/"
+    },
+    {
+      "id": "pyramid",
+      "title": "Sprunki Pyramid",
+      "image": "/game/pyramid-icon.jpg",
+      "url": "/sprunki-pyramid/"
+    },
+    {
+      "id": "sprunkihuman",
+      "title": "Sprunki Human",
+      "image": "/game/sprunki-human-icon.jpg",
+      "url": "/sprunki-human/"
+    },
+    {
+      "id": "scrunkly",
+      "title": "Sprunki Scrunkly",
+      "image": "/game/scrunkly-icon.jpg",
+      "url": "/sprunki-scrunkly/"
+    },
+    {
+      "id": "sprunkiretakedeluxe",
+      "title": "Sprunki Retake Deluxe",
+      "image": "/game/sprunki-retake-deluxe-icon.jpg",
+      "url": "/sprunki-retake-deluxe/"
+    },
+    {
+      "id": "retake-new-update",
+      "title": "Sprunki Retake New Update",
+      "image": "/game/sprunki-retake-new-update-icon.jpg",
+      "url": "/sprunki-retake-new-update/"
+    },
+    {
+      "id": "sprunkiocreal",
+      "title": "Sprunki OC Real",
+      "image": "/game/sprunki-oc-real-icon.jpg",
+      "url": "/sprunki-oc-real/",
+      "target": ""
+    }
+  ]
+}
