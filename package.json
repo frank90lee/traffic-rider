@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-data.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "node scripts/build-data.js && npx @cloudflare/next-on-pages",
+    "pages:build": "npm run prebuild && npx @cloudflare/next-on-pages",
     "pages:preview": "npm run pages:build && wrangler pages dev .vercel/output/static"
   },
   "dependencies": {
