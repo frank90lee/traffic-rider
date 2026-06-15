@@ -1,5 +1,5 @@
 {
-  "name": "landing-page-intl",
+  "name": "traffic-rider",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -32,7 +32,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.16",
+    "@cloudflare/next-on-pages": "1.13.15",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20",
     "@types/react": "^18",
