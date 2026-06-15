@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import React from "react";
 
-export const runtime = "edge";
+export const runtime = 'edge';
 
 import GitalkComponent from "@/app/components/GitalkComponent";
 import ShareButtons from "@/app/components/ShareButtons";

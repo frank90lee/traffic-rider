@@ -1,6 +1,6 @@
 import { LocaleProps } from "@/types/Index";
 
-export const runtime = "edge";
+export const runtime = 'edge';
 
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";

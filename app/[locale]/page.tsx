@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import React from "react";
 
-export const runtime = "edge";
+export const runtime = 'edge';
 
 import ShareButtons from "@/app/components/ShareButtons";
 import * as LucideIcons from "lucide-react";

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const runtime = "edge";
+export const runtime = 'edge';
 
 import { Metadata } from 'next'
 import FeedbackForm from '@/app/components/FeedbackForm';

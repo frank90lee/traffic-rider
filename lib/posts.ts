@@ -1,38 +1,30 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import { PostData } from '@/types/Index'
-
-const getPostsDirectory = () => path.join(process.cwd(), 'data', 'md')
+import { postsData } from './data-cache'
 
 export function getSortedPostsData() {
-  if (process.env.NEXT_RUNTIME === 'edge' || !fs.readdirSync) {
-    return [];
-  }
-  const postsDirectory = getPostsDirectory()
-  // Get file names under /data/md
-  const fileNames = fs.readdirSync(postsDirectory)
-  const allPostsData = fileNames.filter(fileName => fileName.endsWith('.md')).map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '')
+  const allPostsData: {
+    id: string;
+    title: string;
+    description: string;
+    date: string;
+    locale: string;
+  }[] = [];
+  
+  Object.keys(postsData).forEach(locale => {
+    Object.keys(postsData[locale]).forEach(slug => {
+      const { data } = postsData[locale][slug];
+      allPostsData.push({
+        id: slug,
+        title: (data.title as string) || '',
+        description: (data.description as string) || '',
+        date: (data.date as string) || '',
+        locale
+      });
+    });
+  });
 
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents)
-
-    // Combine the data with the id
-    return {
-      id,
-      title: matterResult.data.title as string,
-      description: matterResult.data.description as string,
-      date: matterResult.data.date as string,
-    }
-  })
   // Sort posts by date
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
@@ -44,59 +36,54 @@ export function getSortedPostsData() {
 }
 
 export async function getPostData(locale: string, slug: string): Promise<PostData> {
-  if (process.env.NEXT_RUNTIME === 'edge' || !fs.readFileSync) {
-    // Return a default object if fs is not available
-    return {
-      slug,
-      contentHtml: '',
-      title: 'Default Title',
-      description: 'Default Description',
-    } as PostData;
+  const post = postsData[locale]?.[slug];
+  
+  if (!post) {
+    throw new Error(`Post not found: ${locale}/${slug}`);
   }
-  const postsDirectory = getPostsDirectory();
-  const fullPath = path.join(postsDirectory, locale, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
+  const { data, content } = post;
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)
-    .process(matterResult.content);
+    .process(content);
   const contentHtml = processedContent.toString();
 
   // Combine the data with the id and contentHtml
   return {
     slug,
     contentHtml,
-    title: matterResult.data.title as string,
-    description: matterResult.data.description as string,
-    ...matterResult.data
+    title: (data.title as string) || '',
+    description: (data.description as string) || '',
+    ...data
   } as PostData;
 }
 
 export async function getPostData2(id: string) {
-  if (process.env.NEXT_RUNTIME === 'edge' || !fs.readFileSync) {
+  // Simplified version for backward compatibility if needed
+  // Since we don't know the locale here, we'll search for it
+  let post: { data: Record<string, unknown>, content: string } | null = null;
+  Object.keys(postsData).forEach(locale => {
+    if (postsData[locale][id]) {
+      post = postsData[locale][id];
+    }
+  });
+
+  if (!post) {
     return { id, contentHtml: '' };
   }
-  const postsDirectory = getPostsDirectory()
-  const fullPath = path.join(postsDirectory, `${id}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents)
+  const { data, content } = (post as { data: Record<string, unknown>, content: string });
 
-  // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)
-    .process(matterResult.content)
+    .process(content)
   const contentHtml = processedContent.toString()
 
-  // Combine the data with the id and contentHtml
   return {
     id,
     contentHtml,
-    ...matterResult.data
+    ...data
   }
 }
