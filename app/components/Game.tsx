@@ -47,6 +47,8 @@ const Game = ({ src, title = "Game" }: GameProps) => {
             src={src}
             title={title}
             allowFullScreen
+            allow="autoplay; fullscreen; keyboard; gamepad"
+            referrerPolicy="no-referrer"
           />
           {/* 左下角遮罩层 */}
           {/* <div className="absolute bottom-0 left-0 h-12 w-full bg-gray-900 z-10 flex items-center px-4">

@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import Adsense from "./components/Adsense";
+import { Metadata } from "next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -13,6 +14,12 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.svg",
+  },
+};
 
 export default function RootLayout({
   children,
