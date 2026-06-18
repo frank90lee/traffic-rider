@@ -37,10 +37,10 @@ export default function PrivacyPolicy({ params: { locale } }: LocaleProps) {
           <p className="mb-8 text-gray-600">
             Sprunki Pyramixed Games operates the website (
             <a
-              href={process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"}
+              href={process.env.NEXT_PUBLIC_SITE_URL || "https://traffic-rider.org/"}
               className="text-blue-600 hover:text-blue-800"
             >
-              {process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"}
+              {process.env.NEXT_PUBLIC_SITE_URL || "https://traffic-rider.org/"}
             </a>
             ) and is committed to protecting your privacy. We take pride in our
             no-data-collection approach, ensuring maximum privacy for our users.

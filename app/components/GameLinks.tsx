@@ -10,31 +10,35 @@ const GameLinks = ({ excludeId, locale }: GameLinksProps) => {
   const filteredGames = excludeId
     ? games.games.filter((game) => game.id !== excludeId)
     : games.games;
-    if (locale === "en") {
-      locale = "";
-    }
+    
+  if (locale === "en") {
+    locale = "";
+  }
+  
   return (
     <section className="">
       <div className="w-full mx-auto">
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-3">
           {filteredGames.map((game) => (
-            <Link key={game.id} href={game.target ? game.url : (locale ? `/${locale}${game.url}` : `${game.url}`)} className="block" target={game.target}>
-              <div className="relative overflow-hidden bg-slate-100 transition-all cursor-pointer shadow-m rounded-xl group">
-                <div className="transition-transform duration-300 group-hover:scale-105">
-                  <div className="relative w-full pb-[55%] mb-2">
-                    <div className="absolute inset-0">
-                      <img
-                        src={game.image}
-                        alt={game.title}
-                        className="w-full h-full object-cover rounded-t-xl"
-                      />
-                    </div>
-                  </div>
-                  <div className="px-2 pb-2">
-                    <p className="text-gray-800 text-sm font-medium text-center truncate">
-                      {game.title}
-                    </p>
-                  </div>
+            <Link 
+              key={game.id} 
+              href={game.target ? game.url : (locale ? `/${locale}${game.url}` : `${game.url}`)} 
+              className="block group" 
+              target={game.target}
+            >
+              <div className="relative aspect-square overflow-hidden bg-slate-100 rounded-xl shadow-sm">
+                {/* Game Image */}
+                <img
+                  src={game.image}
+                  alt={game.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                
+                {/* Hover Overlay with Game Title */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                  <p className="text-white text-xs font-bold w-full text-center leading-tight drop-shadow-sm">
+                    {game.title}
+                  </p>
                 </div>
               </div>
             </Link>

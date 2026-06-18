@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 const GoogleAnalytics = () => {
-  const domain = process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL).hostname : "pyramixed.org";
+  const domain = process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL).hostname : "traffic-rider.org";
   return (
     <>
       <Script defer data-domain={domain} src="https://app.pageview.app/js/script.js" />

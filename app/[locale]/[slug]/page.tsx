@@ -35,7 +35,7 @@ export async function generateMetadata({
   const postData = await getPostData(locale, slug);
   const canonicalLocale = locale === "en" ? "" : `/${locale}`;
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://traffic-rider.org/"),
     title: postData.title,
     description: postData.description,
     alternates: {
@@ -68,11 +68,11 @@ function PageContent({ postData, locale }: PageContentProps) {
               )}
               <div className="p-4 md:p-6 flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
-                  <LucideIcons.Gamepad2 className="text-purple-600" size={24} />
-                  <h1 className="text-2xl font-bold text-slate-900">{name}</h1>
+                  <LucideIcons.Zap className="text-cyan-600" size={24} />
+                  <span className="text-2xl font-bold text-slate-900">{name}</span>
                 </div>
                 <ShareButtons 
-                  url={`${process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"}${locale === 'en' ? '' : locale + '/'}${gameSlug}/`} 
+                  url={`${process.env.NEXT_PUBLIC_SITE_URL || "https://traffic-rider.org/"}${locale === 'en' ? '' : locale + '/'}${gameSlug}/`} 
                   title={title} 
                 />
               </div>
@@ -92,6 +92,14 @@ function PageContent({ postData, locale }: PageContentProps) {
 
             <Breadcrumb items={[{ label: name }]} />
 
+            {/* Main Content Area */}
+            <div className="bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200">
+              <article
+                className="prose max-w-none prose-slate prose-lg prose-headings:text-slate-900 prose-p:text-slate-700 prose-p:leading-relaxed prose-a:text-cyan-600 prose-img:rounded-xl prose-img:shadow-lg prose-img:mx-auto prose-li:text-slate-700"
+                dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+              />
+            </div>
+
             {/* Features Module */}
             {postData.features && postData.features.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -100,16 +108,16 @@ function PageContent({ postData, locale }: PageContentProps) {
                   const Icon = LucideIcons[iconName] as LucideIcons.LucideIcon;
                   
                   return (
-                    <div key={idx} className="p-5 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-purple-200 transition-colors">
+                    <div key={idx} className="p-5 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-cyan-200 transition-colors">
                       <div className="flex items-start gap-4">
                         {Icon && (
-                          <div className="p-2.5 bg-purple-50 rounded-lg text-purple-600">
+                          <div className="p-2.5 bg-cyan-50 rounded-lg text-cyan-600">
                             <Icon size={20} />
                           </div>
                         )}
                         <div>
-                          <h3 className="font-bold text-slate-900 mb-1">{feature.title}</h3>
-                          <p className="text-sm text-slate-500 leading-relaxed">{feature.description}</p>
+                          <h2 className="text-xl font-bold text-slate-900 mb-1">{feature.title}</h2>
+                          <p className="text-base text-slate-600 leading-relaxed">{feature.description}</p>
                         </div>
                       </div>
                     </div>
@@ -122,7 +130,7 @@ function PageContent({ postData, locale }: PageContentProps) {
             {postData.steps && postData.steps.length > 0 && (
               <div className="space-y-6">
                 <div className="flex items-center gap-2 text-xl font-bold text-slate-900">
-                  <LucideIcons.ListChecks className="text-purple-600" />
+                  <LucideIcons.ListChecks className="text-cyan-600" />
                   <h2>How to Play {name}</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -132,15 +140,15 @@ function PageContent({ postData, locale }: PageContentProps) {
                         <span className="text-6xl font-black text-slate-900">{idx + 1}</span>
                       </div>
                       <h3 className="text-lg font-bold text-slate-900 mb-4 relative z-10 flex items-center gap-2">
-                        <span className="flex items-center justify-center w-6 h-6 bg-purple-600 text-white text-xs rounded-full">
+                        <span className="flex items-center justify-center w-6 h-6 bg-cyan-600 text-white text-xs rounded-full">
                           {idx + 1}
                         </span>
                         {step.title}
                       </h3>
-                      <ul className="space-y-3 relative z-10">
+                      <ul className="space-y-4 relative z-10">
                         {step.items.map((item, iIdx) => (
-                          <li key={iIdx} className="text-sm text-slate-600 flex items-start gap-2">
-                            <LucideIcons.CheckCircle2 className="text-green-500 mt-0.5 shrink-0" size={14} />
+                          <li key={iIdx} className="text-base text-slate-700 flex items-start gap-3">
+                            <LucideIcons.CheckCircle2 className="text-green-500 mt-1 shrink-0" size={18} />
                             {item}
                           </li>
                         ))}
@@ -150,14 +158,6 @@ function PageContent({ postData, locale }: PageContentProps) {
                 </div>
               </div>
             )}
-
-            {/* Main Content Area */}
-            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
-              <article
-                className="prose max-w-none prose-slate prose-headings:text-slate-900 prose-p:text-slate-600 prose-a:text-purple-600 prose-img:rounded-xl prose-img:shadow-lg prose-img:mx-auto prose-li:text-slate-600"
-                dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-              />
-            </div>
 
             {/* FAQ Module */}
             {postData.faq && postData.faq.length > 0 && (
@@ -179,20 +179,20 @@ function PageContent({ postData, locale }: PageContentProps) {
                     }),
                   }}
                 />
-                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200">
-                  <div className="flex items-center gap-2 mb-6 text-xl font-bold text-slate-900">
-                    <LucideIcons.HelpCircle className="text-purple-600" />
+                <div className="bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200">
+                  <div className="flex items-center gap-2 mb-8 text-2xl font-bold text-slate-900">
+                    <LucideIcons.HelpCircle className="text-cyan-600" size={28} />
                     <h2>Frequently Asked Questions</h2>
                   </div>
-                  <div className="space-y-4">
+                  <div className="space-y-6">
                     {postData.faq.map((item, idx) => (
-                      <div key={idx} className="border-b border-slate-100 last:border-0 pb-4 last:pb-0">
-                        <h3 className="font-bold text-slate-900 mb-2 flex items-start gap-2">
-                          <span className="text-purple-500">Q:</span>
+                      <div key={idx} className="border-b border-slate-100 last:border-0 pb-6 last:pb-0">
+                        <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-start gap-3">
+                          <span className="text-cyan-600 shrink-0">Q:</span>
                           {item.question}
                         </h3>
-                        <p className="text-slate-600 pl-6 relative">
-                          <span className="absolute left-0 text-slate-300 font-bold">A:</span>
+                        <p className="text-base text-slate-600 pl-8 relative leading-relaxed">
+                          <span className="absolute left-0 text-slate-400 font-bold">A:</span>
                           {item.answer}
                         </p>
                       </div>
@@ -204,23 +204,23 @@ function PageContent({ postData, locale }: PageContentProps) {
           </div>
 
           {/* Sidebar */}
-          <aside className="w-full lg:w-80 space-y-6">
+          {/* <aside className="w-full lg:w-80 space-y-6">
             <div className="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 sticky top-24">
               <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
-                <LucideIcons.Gamepad className="text-purple-600" size={20} />
+                <LucideIcons.Gamepad className="text-cyan-600" size={20} />
                 <h3>Recommended Games</h3>
               </div>
               <GameLinks locale={locale} excludeId={gameSlug} />
               
               <div className="mt-8">
                 <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
-                  <LucideIcons.MessageSquare className="text-purple-600" size={20} />
+                  <LucideIcons.MessageSquare className="text-cyan-600" size={20} />
                   <h3>Community Comments</h3>
                 </div>
                 <GitalkComponent title={name} id={gameSlug} />
               </div>
             </div>
-          </aside>
+          </aside> */}
         </div>
       </main>
       <Footer t={index} />

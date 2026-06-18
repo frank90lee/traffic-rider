@@ -31,10 +31,10 @@ const Footer = ({ t }: TranslationProps) => {
 
           <div>
             <h3 className="text-white font-bold mb-6">{t("footer.sections.legal.title")}</h3>
-            <ul className="space-y-3 text-xs text-slate-500">
+            <ul className="space-y-4 text-sm">
               {t.raw("footer.sections.legal.items").map((item: LinkItem, index: number) => (
                 <li key={index}>
-                  <a href={item.link} className="hover:text-slate-300 transition-colors">{item.title}</a>
+                  <a href={item.link} className="hover:text-cyan-400 transition-colors">{item.title}</a>
                 </li>
               ))}
             </ul>
@@ -42,7 +42,7 @@ const Footer = ({ t }: TranslationProps) => {
           {/* Language selection hidden as requested */}
         </div>
         
-        <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+        <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-400">
           <p>{t("footer.copyright")}</p>
         </div>
       </div>

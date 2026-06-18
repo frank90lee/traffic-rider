@@ -1,0 +1,52 @@
+# SEO-Game-Page-Tailor Skill Specification
+
+## 1. Core Objective
+To build high-quality, SEO-optimized game detail pages by deeply tailoring content based on raw game data, ensuring a unique "soul" for each game while maintaining technical and UI consistency with the homepage.
+
+## 2. Full Workflow (SOP)
+
+### Phase 1: Deep Data Discovery
+**MANDATORY: Never skip this step.**
+- **Action A: Multi-Source Search**
+    - Search for `[Game Name] gameplay details`, `mechanics`, `vehicles/items list`, `controls`, and `developer facts`.
+    - **Required Facts**: Core loop, control keys, upgrade paths, obstacle types, developer info, and technical platform (e.g., Unity/HTML5).
+- **Action B: SEO Keyword Research**
+    - Identify:
+        - **Main Keyword**: Game Name.
+        - **Long-tail Keywords**: `unblocked`, `free online`, `how to play`, `at school`.
+        - **LSI Keywords**: Semantic terms (e.g., for water games: `buoyancy`, `rapids`, `splash`).
+- **Deliverables**:
+    - `data/md/[game]-info.md`: Raw English facts (no processing).
+    - `data/md/[game]-keywords.md`: Keyword list.
+
+### Phase 2: Bespoke Content Crafting
+- **Concept**: Use raw facts as the "skeleton" and creative, game-specific language as the "flesh".
+- **Front Matter Tailoring**:
+    - **Features**: Dynamic count and icons based on actual game highlights. Icons must be intuitive.
+    - **Steps**: Customized logic (e.g., "Resource Management" for strategy, "Reflex Training" for racing).
+    - **FAQ**: Address real player pain points and high-intent search queries.
+- **Article Reconstruction**:
+    - **Unique H1/H2**: Use evocative, game-specific verbs (e.g., "Conquering the Torrent" instead of "Game Overview").
+    - **Soul-Injected Narrative**: Describe unique physics, environmental feedback, or the emotional curve of progression.
+    - **SEO Density**: Maintain ~3% keyword density naturally.
+
+### Phase 3: UI & Visual Alignment
+- **Color Theme**: Strictly use the `cyan-600` (Cyan) palette to match the site's brand.
+- **Layout Order**:
+    1. Game Play Card
+    2. Tags / Breadcrumb
+    3. **Main Content Article (containing H1)**
+    4. Features Module
+    5. How to Play (Steps) Module
+    6. FAQ Module
+- **Visual Details**:
+    - Use `LucideIcons.Zap` for the game name icon.
+    - Use `prose-lg` and `prose-slate` for article typography.
+    - Match `rounded-2xl` and `shadow-sm` for all cards.
+
+### Phase 4: Verification & Sync
+- **Prebuild**: Run `npm run prebuild` to sync `lib/data-cache.ts`.
+- **SEO Audit**: Single H1 check, proper H2->H3 hierarchy, and canonical link verification.
+
+## 3. Trigger Command
+> "Build a new internal page for [Game Name] following the SEO-Game-Page-Tailor specification."

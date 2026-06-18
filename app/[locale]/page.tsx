@@ -12,6 +12,7 @@ export const runtime = 'edge';
 
 import ShareButtons from "@/app/components/ShareButtons";
 import * as LucideIcons from "lucide-react";
+import GameLinks from "../components/GameLinks";
 
 export async function generateStaticParams() {
   return [{ locale: 'en' }];
@@ -23,7 +24,7 @@ export async function generateMetadata({
   const postData = await getPostData(locale, "traffic-rider");
   const canonicalLocale = locale === "en" ? "" : `/${locale}`;
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://traffic-rider.org/"),
     title: postData.title,
     description: postData.description,
     alternates: {
@@ -32,7 +33,7 @@ export async function generateMetadata({
   };
 }
 
-function PageContent({ postData }: PageContentProps) {
+function PageContent({ postData, locale }: PageContentProps) {
   const index = useTranslations("Index");
   const title = postData.title;
   const name = postData.name || postData.title;
@@ -58,7 +59,7 @@ function PageContent({ postData }: PageContentProps) {
                   <LucideIcons.Zap className="text-cyan-600" size={24} />
                   <span className="text-2xl font-bold text-slate-900">{name}</span>
                 </div>
-                <ShareButtons url={process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"} title={title} />
+                <ShareButtons url={process.env.NEXT_PUBLIC_SITE_URL || "https://traffic-rider.org/"} title={title} />
               </div>
             </div>
 
@@ -173,7 +174,7 @@ function PageContent({ postData }: PageContentProps) {
           </div>
 
           {/* Sidebar */}
-          {/* <aside className="w-full lg:w-80 space-y-6">
+          <aside className="w-full lg:w-80 space-y-6">
             <div className="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 sticky top-24">
               <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
                 <LucideIcons.Flame className="text-cyan-600" size={20} />
@@ -181,15 +182,15 @@ function PageContent({ postData }: PageContentProps) {
               </div>
               <GameLinks locale={locale} excludeId="traffic-rider" />
               
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
                   <LucideIcons.MessageSquare className="text-cyan-600" size={20} />
                   <h3>Community</h3>
                 </div>
                 <GitalkComponent title={name} id="traffic-rider-home" />
-              </div>
+              </div> */}
             </div>
-          </aside> */}
+          </aside>
         </div>
       </main>
       <Footer t={index} />

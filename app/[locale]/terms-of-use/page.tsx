@@ -39,10 +39,10 @@ export default function TermsOfUse({ params: { locale } }: LocaleProps) {
           <p className="mb-8 text-gray-600">
             By accessing and using Sprunki Pyramixed Games (
             <a
-              href={process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"}
+              href={process.env.NEXT_PUBLIC_SITE_URL || "https://traffic-rider.org/"}
               className="text-blue-600 hover:text-blue-800"
             >
-              {process.env.NEXT_PUBLIC_SITE_URL || "https://pyramixed.org/"}
+              {process.env.NEXT_PUBLIC_SITE_URL || "https://traffic-rider.org/"}
             </a>
             ), you agree to comply with and be bound by these Terms of Use. If
             you do not agree with any part of these terms, please do not use our
