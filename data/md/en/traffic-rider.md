@@ -2,7 +2,7 @@
 title: "Traffic Rider: Ultimate First-Person Motorbike Racing Guide"
 name: "Traffic Rider"
 description: "Master Traffic Rider with our ultimate guide. Featuring 34+ bikes, 90+ missions, and pro racing strategies. Play free online now!"
-gameSrc: "https://traffic-rider.io/game/traffic-rider"
+gameSrc: "https://trafficroad.io/traffic-rider.embed"
 features:
   - title: "First-Person Cockpit View"
     description: "Get behind the handlebars with a realistic first-person perspective that puts you in the center of the action."
