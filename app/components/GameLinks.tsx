@@ -22,9 +22,8 @@ const GameLinks = ({ excludeId, locale }: GameLinksProps) => {
           {filteredGames.map((game) => (
             <Link 
               key={game.id} 
-              href={game.target ? game.url : (locale ? `/${locale}${game.url}` : `${game.url}`)} 
-              className="block group" 
-              target={game.target}
+              href={locale ? `/${locale}${game.url}` : `${game.url}`} 
+              className="block group"
             >
               <div className="relative aspect-square overflow-hidden bg-slate-100 rounded-xl shadow-sm">
                 {/* Game Image */}

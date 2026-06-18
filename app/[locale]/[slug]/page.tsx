@@ -10,9 +10,9 @@ import React from "react";
 
 export const runtime = 'edge';
 
-import GitalkComponent from "@/app/components/GitalkComponent";
+// import GitalkComponent from "@/app/components/GitalkComponent";
 import ShareButtons from "@/app/components/ShareButtons";
-import GameLinks from "@/app/components/GameLinks";
+// import GameLinks from "@/app/components/GameLinks";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import * as LucideIcons from "lucide-react";
 
