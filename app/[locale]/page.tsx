@@ -178,7 +178,7 @@ function PageContent({ postData, locale }: PageContentProps) {
             <div className="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 sticky top-24">
               <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
                 <LucideIcons.Flame className="text-cyan-600" size={20} />
-                <h3>Trending Games</h3>
+                <h3>Other Rider Games</h3>
               </div>
               <GameLinks locale={locale} excludeId="traffic-rider" />
               
