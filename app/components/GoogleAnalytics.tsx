@@ -7,7 +7,7 @@ const GoogleAnalytics = () => {
   return (
     <>
       <Script defer data-domain={domain} src="https://app.pageview.app/js/script.js" />
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-MB6X85VYKB`}
       />
@@ -24,7 +24,7 @@ const GoogleAnalytics = () => {
             });
           `,
         }}
-      />
+      /> */}
     </>
   );
 };
