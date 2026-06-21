@@ -180,7 +180,7 @@ function PageContent({ postData, locale }: PageContentProps) {
                 <LucideIcons.Flame className="text-cyan-600" size={20} />
                 <h3>Other Rider Games</h3>
               </div>
-              <GameLinks locale={locale} excludeId="traffic-rider" />
+              <GameLinks locale={locale} />
               
               {/* <div className="mt-8">
                 <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">

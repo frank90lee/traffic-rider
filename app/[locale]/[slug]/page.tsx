@@ -21,7 +21,8 @@ export async function generateStaticParams() {
   return [
     { locale: 'en', slug: 'traffic-rider' },
     { locale: 'en', slug: 'water-rider-3d' },
-    { locale: 'en', slug: 'snow-rider-3d' }
+    { locale: 'en', slug: 'snow-rider-3d' },
+    { locale: 'en', slug: 'moto-rider-3d' }
   ];
 }
 
@@ -185,7 +186,7 @@ function PageContent({ postData, locale }: PageContentProps) {
                 <div className="bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200">
                   <div className="flex items-center gap-2 mb-8 text-2xl font-bold text-slate-900">
                     <LucideIcons.HelpCircle className="text-cyan-600" size={28} />
-                    <h2>Frequently Asked Questions</h2>
+                    <h2 className="text-2xl font-bold text-slate-900 mb-6">{name} FAQ</h2>
                   </div>
                   <div className="space-y-6">
                     {postData.faq.map((item, idx) => (
@@ -213,7 +214,7 @@ function PageContent({ postData, locale }: PageContentProps) {
                 <LucideIcons.Gamepad className="text-cyan-600" size={20} />
                 <h3>Rider Games</h3>
               </div>
-              <GameLinks locale={locale} excludeId={gameSlug} />
+              <GameLinks locale={locale} />
               
               {/* <div className="mt-8">
                 <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">

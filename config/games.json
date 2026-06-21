@@ -17,6 +17,12 @@
       "title": "Snow Rider 3D",
       "image": "/game/snow-rider-3d-icon.webp",
       "url": "/snow-rider-3d/"
+    },
+    {
+      "id": "moto-rider-3d",
+      "title": "Moto Rider 3D",
+      "image": "/game/moto-rider-3d-icon.webp",
+      "url": "/moto-rider-3d/"
     }
   ]
 }

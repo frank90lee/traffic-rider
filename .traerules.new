@@ -21,22 +21,19 @@ To build high-quality, SEO-optimized game detail pages by deeply tailoring conte
         - **Real Pain Points**: What makes players frustrated? (e.g., "that one tree at 5000m", "lag on mobile").
         - **Emotional Highs**: What makes them addicted? (e.g., "the sound of the snow", "satisfying jumps").
         - **Community Slang**: Specific terms players use for game elements.
-- **Action C: Fact Synthesis & Deduplication**
+- **Action C: Fact Synthesis & Keyword Integration (The "Master" Source)**
     - Create `data/md/[game]-info.md` as the "Master Fact Database".
     - **Entity Database**: Extract specific numbers, proper names, and exact control schemes.
-    - **Sentiment Section**: Add a "Player Sentiment" block in `info.md` summarizing the "Soul" of the game found in Action B.
-    - **Technical Facts**: Developer info, engine, release year, and optimizations.
-- **Action D: SEO Keyword Research**
-    - Identify:
+    - **Sentiment Section**: Add a "Player Sentiment" block summarizing the "Soul" of the game.
+    - **SEO Keywords**: Integrate a "Keywords" block including:
         - **Main Keyword**: Game Name.
-        - **Long-tail Keywords**: `unblocked`, `free online`, `how to play`, `at school`.
-        - **LSI Keywords**: Semantic terms derived from the 5 fetched sources and player comments.
+        - **Long-tail Keywords**: `unblocked`, `free online`, etc.
+        - **LSI Keywords**: Semantic terms from sources and comments.
 - **Deliverables**:
-    - `data/md/[game]-info.md`: Definitive, high-density raw facts + Player Sentiment (Target: 20+ unique facts/insights).
-    - `data/md/[game]-keywords.md`: Keyword list.
+    - `data/md/[game]-info.md`: Definitive, high-density raw facts + Player Sentiment + SEO Keywords (Target: 30+ unique data points).
 
 ### Phase 2: Bespoke Content Crafting
-- **Concept**: Use the Master Fact Database as the "skeleton" and creative, game-specific language as the "flesh". **NO HALLUCINATION/FILLER**.
+- **Concept**: Use the `[game]-info.md` as the single source of truth ("skeleton") and creative language as the "flesh". **NO HALLUCINATION/FILLER**.
 - **Front Matter Tailoring**:
     - **Features**: Dynamic count and icons based on actual game highlights. 
     - **Steps**: Customized logic based on actual game progression.
