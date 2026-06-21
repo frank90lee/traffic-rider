@@ -1,0 +1,68 @@
+# SEO-Game-Page-Tailor Skill Specification (v2.1 - Intelligence & Soul Enhanced)
+
+## 1. Core Objective
+To build high-quality, SEO-optimized game detail pages by deeply tailoring content based on raw game data, ensuring a unique "soul" for each game while maintaining technical and UI consistency with the homepage.
+
+## 2. Full Workflow (SOP)
+
+### Phase 1: Deep Data Discovery (5 Sources / 5000 Words / Player Voice)
+**MANDATORY: Never skip this step. Accuracy over speed.**
+- **Action A: Multi-Source Search & Parallel Fetch**
+    - Execute at least 4 specific queries: 
+        1. `[Game Name] gameplay details mechanics guide` (Depth)
+        2. `[Game Name] all items/vehicles/unlockables list prices` (Data)
+        3. `[Game Name] tips tricks high score reddit` (Strategy)
+        4. `[Game Name] reviews comments player feedback "crazygames" "y8"` (Sentiment)
+    - Identify the **Top 5 organic authoritative sources** (Wikis, major portals, Reddit threads, expert guides).
+    - **MANDATORY**: Use `run_mcp` with `mcp_Fetch` or `mcp_Firecrawl` to grab the **full markdown content** of these 5 sources.
+- **Action B: Community Voice Mining (The "Soul" Source)**
+    - **MANDATORY**: Extract at least 5-10 real player comments or reviews.
+    - **Identify**: 
+        - **Real Pain Points**: What makes players frustrated? (e.g., "that one tree at 5000m", "lag on mobile").
+        - **Emotional Highs**: What makes them addicted? (e.g., "the sound of the snow", "satisfying jumps").
+        - **Community Slang**: Specific terms players use for game elements.
+- **Action C: Fact Synthesis & Deduplication**
+    - Create `data/md/[game]-info.md` as the "Master Fact Database".
+    - **Entity Database**: Extract specific numbers, proper names, and exact control schemes.
+    - **Sentiment Section**: Add a "Player Sentiment" block in `info.md` summarizing the "Soul" of the game found in Action B.
+    - **Technical Facts**: Developer info, engine, release year, and optimizations.
+- **Action D: SEO Keyword Research**
+    - Identify:
+        - **Main Keyword**: Game Name.
+        - **Long-tail Keywords**: `unblocked`, `free online`, `how to play`, `at school`.
+        - **LSI Keywords**: Semantic terms derived from the 5 fetched sources and player comments.
+- **Deliverables**:
+    - `data/md/[game]-info.md`: Definitive, high-density raw facts + Player Sentiment (Target: 20+ unique facts/insights).
+    - `data/md/[game]-keywords.md`: Keyword list.
+
+### Phase 2: Bespoke Content Crafting
+- **Concept**: Use the Master Fact Database as the "skeleton" and creative, game-specific language as the "flesh". **NO HALLUCINATION/FILLER**.
+- **Front Matter Tailoring**:
+    - **Features**: Dynamic count and icons based on actual game highlights. 
+    - **Steps**: Customized logic based on actual game progression.
+    - **FAQ**: Address real player pain points and community questions identified in Phase 1.
+- **Article Reconstruction**:
+    - **Unique H1/H2**: Use evocative, game-specific verbs.
+    - **Soul-Injected Narrative**: Incorporate the "Player Voice" (Sentiment) to describe the experience. Use phrases like "Players often find..." or "The community loves..." to add authenticity.
+    - **SEO Density**: Maintain ~3% keyword density naturally. Ensure keywords appear in H1 and at least 80% of H2/H3 headers.
+
+### Phase 3: UI & Visual Alignment
+- **Color Theme**: Strictly use the `cyan-600` (Cyan) palette to match the site's brand.
+- **Layout Order**:
+    1. Game Play Card
+    2. Tags / Breadcrumb
+    3. **Main Content Article (containing H1)**
+    4. Features Module
+    5. How to Play (Steps) Module
+    6. FAQ Module
+- **Visual Details**:
+    - Use `LucideIcons.Zap` for the game name icon.
+    - Use `prose-lg` and `prose-slate` for article typography.
+    - Match `rounded-2xl` and `shadow-sm` for all cards.
+
+### Phase 4: Verification & Sync
+- **Prebuild**: Run `npm run prebuild` to sync `lib/data-cache.ts`.
+- **SEO Audit**: Single H1 check, proper H2->H3 hierarchy, and canonical link verification.
+
+## 3. Trigger Command
+> "Build a new internal page for [Game Name] following the SEO-Game-Page-Tailor specification."

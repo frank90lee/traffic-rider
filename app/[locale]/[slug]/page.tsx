@@ -15,10 +15,13 @@ import ShareButtons from "@/app/components/ShareButtons";
 // import GameLinks from "@/app/components/GameLinks";
 import Breadcrumb from "@/app/components/Breadcrumb";
 import * as LucideIcons from "lucide-react";
+import GameLinks from "@/app/components/GameLinks";
 
 export async function generateStaticParams() {
   return [
-    { locale: 'en', slug: 'traffic-rider' }
+    { locale: 'en', slug: 'traffic-rider' },
+    { locale: 'en', slug: 'water-rider-3d' },
+    { locale: 'en', slug: 'snow-rider-3d' }
   ];
 }
 
@@ -204,23 +207,23 @@ function PageContent({ postData, locale }: PageContentProps) {
           </div>
 
           {/* Sidebar */}
-          {/* <aside className="w-full lg:w-80 space-y-6">
+          <aside className="w-full lg:w-80 space-y-6">
             <div className="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 sticky top-24">
               <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
                 <LucideIcons.Gamepad className="text-cyan-600" size={20} />
-                <h3>Recommended Games</h3>
+                <h3>Rider Games</h3>
               </div>
               <GameLinks locale={locale} excludeId={gameSlug} />
               
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <div className="flex items-center gap-2 mb-4 font-bold text-slate-900">
                   <LucideIcons.MessageSquare className="text-cyan-600" size={20} />
                   <h3>Community Comments</h3>
                 </div>
                 <GitalkComponent title={name} id={gameSlug} />
-              </div>
+              </div> */}
             </div>
-          </aside> */}
+          </aside>
         </div>
       </main>
       <Footer t={index} />

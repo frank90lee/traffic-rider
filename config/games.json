@@ -1,10 +1,22 @@
 {
   "games": [
     {
+      "id": "traffic-rider",
+      "title": "Traffic Rider",
+      "image": "/game/traffic-rider-icon.webp",
+      "url": "/"
+    },
+    {
       "id": "water-rider-3d",
       "title": "Water Rider 3D",
       "image": "/game/water-rider-3d-icon.webp",
       "url": "/water-rider-3d/"
+    },
+    {
+      "id": "snow-rider-3d",
+      "title": "Snow Rider 3D",
+      "image": "/game/snow-rider-3d-icon.webp",
+      "url": "/snow-rider-3d/"
     }
   ]
 }
