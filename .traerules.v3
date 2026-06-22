@@ -1,0 +1,46 @@
+# SEO-Game-Page-Tailor Skill Specification (v3.0 - Raw Data & Long-Form Wisdom)
+
+## 1. Core Objective
+To build high-quality, SEO-optimized game detail pages by deeply tailoring content based on raw game data, ensuring a unique "soul" for each game while maintaining technical and UI consistency with the homepage. **v3.0 emphasizes the preservation of raw, long-form research to prevent information loss and AI template fatigue.**
+
+## 2. Full Workflow (SOP)
+
+### Phase 1: Deep Data Discovery (5 Sources / 5000 Words / Player Voice)
+**MANDATORY: Never skip this step. Accuracy over speed.**
+- **Action A: Multi-Source Search & Parallel Fetch**
+    - Execute at least 4 specific queries: 
+        1. `[Game Name] gameplay details mechanics guide` (Depth)
+        2. `[Game Name] all items/vehicles/unlockables list prices` (Data)
+        3. `[Game Name] tips tricks high score reddit` (Strategy)
+        4. `[Game Name] reviews comments player feedback "crazygames" "y8"` (Sentiment)
+    - Identify the **Top 5 organic authoritative sources**.
+    - **MANDATORY**: Use `run_mcp` with `mcp_Fetch` or `mcp_Firecrawl` to grab the **full markdown content** of these 5 sources.
+- **Action B: Community Voice Mining (The "Soul" Source)**
+    - **MANDATORY**: Extract at least 5-10 real player comments or reviews.
+    - **Identify**: Real Pain Points, Emotional Highs, and Community Slang.
+- **Action C: Master Database Construction (The "Vault")**
+    - Create `data/md/[game]-info.md` as the "Master Fact Database".
+    - **Structure of info.md (v3.0 Requirement)**:
+        1. **Part 1: Master Fact Points**: 30+ bullet points of structure facts (Entity, Sentiment, Keywords).
+        2. **Part 2: Raw Research Data (Long Form)**: **MANDATORY**. Directly paste the full markdown content from the 5 fetched sources. **DO NOT SUMMARIZE YET**.
+        3. **Part 3: Player Voice Transcripts**: Full, unedited transcripts of player comments to preserve "tone" and "slang".
+- **Deliverables**:
+    - `data/md/[game]-info.md`: Structure Points + **Full Raw Content** + SEO Keywords.
+
+### Phase 2: Bespoke Content Crafting
+- **Concept**: Use the `[game]-info.md` as the single source of truth. Refer to **Part 2 (Raw Data)** whenever you need deeper descriptions to avoid "AI template flavor".
+- **Front Matter Tailoring**: Features, Steps, and FAQ must be derived from actual data points in the Vault.
+- **Article Reconstruction**:
+    - **Soul-Injected Narrative**: Use the unedited player voice from Part 3 to add authenticity. Use specific phrases found in raw data.
+    - **SEO Density**: Maintain ~3% keyword density naturally.
+
+### Phase 3: UI & Visual Alignment
+- **Color Theme**: Strictly use the `cyan-600` (Cyan) palette.
+- **Visual Details**: `LucideIcons.Zap` for game icon, `prose-lg` for typography, `rounded-2xl` for cards.
+
+### Phase 4: Verification & Sync
+- **Prebuild**: Run `npm run prebuild` to sync `lib/data-cache.ts`.
+- **SEO Audit**: Single H1 check, proper H2->H3 hierarchy, and canonical link verification.
+
+## 3. Trigger Command
+> "Build a new internal page for [Game Name] following the SEO-Game-Page-Tailor v3.0 specification."
