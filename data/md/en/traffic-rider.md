@@ -45,6 +45,8 @@ faq:
 
 # Traffic Rider – Online Game (Play Free)
 
+![Traffic Rider Game Start Screen](/game/traffic-rider-start-screen.webp)
+
 Traffic Rider, developed by **Soner Kara (SK Games)** and released in January 2016, revolutionized the mobile racing genre. The **Traffic Rider game** takes the endless racing formula established by its predecessor, Traffic Racer, and elevates it with a full career mode, a revolutionary first-person perspective, and hyper-realistic graphics. Built on the **Unity engine**, the game delivers a smooth 60fps experience even on mid-range devices, allowing players to weave through traffic with pinpoint precision.
 
 ## Traffic Rider Online Gameplay: What to Expect
@@ -57,6 +59,8 @@ Every aspect of the **Traffic Rider game** is designed for immersion. The motorc
 - **Dynamic Environments**: Race through 4 distinct environments—Suburbs, Desert, Snow, and City.
 - **Time of Day**: The game features dynamic transitions between noon, evening, and night, each affecting visibility and AI behavior.
 - **Interactive Traffic**: AI vehicles in Traffic Rider are smarter than in most endless runners; they use turn signals and react to your presence, making high-speed overtakes a true test of reflexes.
+
+![Traffic Rider Gameplay in Rain](/game/traffic-rider-gameplay-rain.webp)
 
 ## Traffic Rider Game Modes (Career, Endless, Time Trial, Free Ride)
 

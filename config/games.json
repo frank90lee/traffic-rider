@@ -23,6 +23,12 @@
       "title": "Moto Rider 3D",
       "image": "/game/moto-rider-3d-icon.webp",
       "url": "/moto-rider-3d/"
+    },
+    {
+      "id": "sky-riders",
+      "title": "Sky Riders",
+      "image": "/game/sky-riders-icon.webp",
+      "url": "/sky-riders/"
     }
   ]
 }

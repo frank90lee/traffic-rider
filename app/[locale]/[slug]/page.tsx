@@ -22,7 +22,8 @@ export async function generateStaticParams() {
     { locale: 'en', slug: 'traffic-rider' },
     { locale: 'en', slug: 'water-rider-3d' },
     { locale: 'en', slug: 'snow-rider-3d' },
-    { locale: 'en', slug: 'moto-rider-3d' }
+    { locale: 'en', slug: 'moto-rider-3d' },
+    { locale: 'en', slug: 'sky-riders' }
   ];
 }
 
