@@ -29,6 +29,12 @@
       "title": "Sky Riders",
       "image": "/game/sky-riders-icon.webp",
       "url": "/sky-riders/"
+    },
+    {
+      "id": "summer-rider-3d",
+      "title": "Summer Rider 3D",
+      "image": "/game/summer-rider-3d-icon.webp",
+      "url": "/summer-rider-3d/"
     }
   ]
 }
