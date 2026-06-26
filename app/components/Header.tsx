@@ -13,7 +13,13 @@ const Header = ({ t, showNavItems = true }: HeaderProps) => {
         <div className="flex items-center space-x-2">
           <a href="/" className="hover:opacity-90 transition-opacity">
             <p className="text-xl md:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-2">
-              <span className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center text-cyan-400 font-sans font-black">R</span>
+              <img
+                src="/favicon.webp"
+                alt={t("header.title")}
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-lg"
+              />
               {t("header.title")}
             </p>
           </a>
