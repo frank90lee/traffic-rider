@@ -35,6 +35,12 @@
       "title": "Summer Rider 3D",
       "image": "/game/summer-rider-3d-icon.webp",
       "url": "/summer-rider-3d/"
+    },
+    {
+      "id": "slope-rider",
+      "title": "Slope Rider",
+      "image": "/game/slope-rider-icon.webp",
+      "url": "/slope-rider/"
     }
   ]
 }

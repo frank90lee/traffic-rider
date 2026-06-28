@@ -155,6 +155,93 @@ export const postsData: Record<string, Record<string, { data: Record<string, unk
       },
       "content": "\n# Sky Riders Game: High-Speed Racing on Floating Tracks\n\n![Sky Riders Gameplay - Driving a car towards the finish line on a floating track](/game/sky-riders-finish-line.webp)\n\nSky Riders is a 3D racing browser game built around one simple idea: the road is in the air, and the penalty for a mistake is instant. In the **Sky Riders game**, you drive a car or ride a motorcycle through narrow, suspended obstacle courses packed with turns, ramps, and checkpoints. The result is a clean, high-pressure loop that feels easy to start and hard to master.\n\n## Sky Riders Gameplay: What Makes It So Addictive\n\nSky Riders works because it is brutally readable: you always know what you did wrong, and you always see what you should try next. Many speedrunners in the community praise the game for its lack of RNG (Random Number Generation).\n\n- **Edge-of-the-seat precision**: Tracks are narrow, so your steering inputs matter more than raw speed. The hitboxes are unforgiving.\n- **Realistic-feeling physics**: Momentum and braking force you to plan ahead instead of reacting late. The car feels heavier and more planted, while the motorcycle is twitchy but essential for tighter gaps.\n- **Short runs, fast retries**: When you fall, you restart quickly at the last checkpoint—perfect for “one more run” sessions.\n\n## How to Play Sky Riders: Controls & Movement\n\nThe control scheme is simple, but the game demands smoothness.\n\n### Sky Riders Controls (Keyboard)\n\n- **W / Up Arrow**: forward\n- **S / Down Arrow**: back\n- **A / Left Arrow**: move left\n- **D / Right Arrow**: move right\n- **Space**: handbrake\n\n## Sky Riders Track Strategy: Mastering Cars and Motorcycles\n\nIf you want to clear more Sky Riders levels consistently, prioritize stability over aggression.\n\n### Rule #1: Stay Centered on the Track\n\nWhenever the track gives you room, return to the center. It buys reaction time and reduces the chance of panic-corrections that throw you off the edge.\n\n### Rule #2: Brake Before the Problem\n\nMost falls happen because players enter a narrow section too fast. In Sky Riders, the best stunt drivers brake early, then accelerate out of the turn once the vehicle is lined up.\n\n## Pro Tips for Beating All 30 Sky Riders Levels\n\nThe handbrake is your emergency tool and your precision tool.\n\n### Use the Handbrake to Recover\n\nIf you feel the vehicle drifting wide, a quick handbrake tap (Spacebar) can help you regain control before the edge. It’s safer than over-steering, especially at higher speeds on the later, more difficult levels.\n\n## Sky Riders Unblocked & Compatibility\n\nBecause Sky Riders runs as a browser game (often listed as **Unity WebGL / HTML5**), it is widely playable on modern devices. If you’re searching for **Sky Riders unblocked** or a quick no-install racing game, this is exactly the style of game that tends to work well on school laptops and everyday browsers.\n\nIf you enjoy the high-speed thrills and physics-based challenges of Sky Riders, you should also check out our [Traffic Rider](/traffic-rider/) and [Moto Rider 3D](/moto-rider-3d/) guides for more intense driving action.\n\n"
     },
+    "slope-rider": {
+      "data": {
+        "title": "Slope Rider – Free Online Sledding Game (No Download)",
+        "name": "Slope Rider",
+        "description": "Play Slope Rider online for free in your browser. Steer, jump, dodge winter hazards, and collect gift boxes to unlock new sleds—instant play, no download.",
+        "gameSrc": "https://trafficroad.io/slope-rider.embed",
+        "features": [
+          {
+            "title": "Endless Downhill Speed",
+            "description": "Your sled auto-runs downhill and the pace ramps up fast. One clean line can turn into chaos in seconds.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Simple Controls, Real Pressure",
+            "description": "Steer left/right and time jumps over gaps and obstacles. Easy to learn, hard to master at high speed.",
+            "icon": "Gamepad2"
+          },
+          {
+            "title": "Winter Hazards & Tight Lines",
+            "description": "Trees, boulders, snowballs, and sudden pits force quick decisions and smooth micro-corrections.",
+            "icon": "ShieldAlert"
+          },
+          {
+            "title": "Gift Boxes → New Sleds",
+            "description": "Collect gift boxes to unlock more sleds. The trick is taking rewards without risking the run.",
+            "icon": "Gift"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Get Comfortable With Control",
+            "items": [
+              "Left / Right Arrow (or A / D): steer",
+              "Up Arrow (or W): jump",
+              "If available, Space may also jump"
+            ]
+          },
+          {
+            "title": "Survive the Speed-Up",
+            "items": [
+              "Stay near the center to give yourself reaction time",
+              "Look ahead for pits, logs, and lane blockers",
+              "Use small taps—big swings cause crashes"
+            ]
+          },
+          {
+            "title": "Unlock Sleds Safely",
+            "items": [
+              "Take gift boxes only on stable lines",
+              "Skip risky boxes near pits or clusters",
+              "Spend gifts in the sled shop to switch rides"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "question": "Is Slope Rider free to play online?",
+            "answer": "Yes. Slope Rider is playable for free in your browser with no download required."
+          },
+          {
+            "question": "What are the Slope Rider controls?",
+            "answer": "Use Left/Right Arrow (or A/D) to steer and Up Arrow (or W) to jump. If available, Space may also jump."
+          },
+          {
+            "question": "Can I slow down or stop in Slope Rider?",
+            "answer": "In most versions, the sled moves downhill automatically and you can’t slow down or stop—survival depends on timing and steering."
+          },
+          {
+            "question": "How do I unlock new sleds in Slope Rider?",
+            "answer": "Collect gift boxes during runs, then use them to unlock new sleds in the in-game shop."
+          },
+          {
+            "question": "Does Slope Rider work on mobile?",
+            "answer": "It depends on the version you’re playing. Many browser versions of the game support mobile controls, but if your run feels off, try switching to desktop for more precise steering and jump timing."
+          },
+          {
+            "question": "What are gift boxes used for in Slope Rider?",
+            "answer": "Gift boxes are the main reward you collect during runs and they’re commonly used to unlock new sleds. It’s usually better to skip risky boxes near pits or obstacle clusters and prioritize survival for a longer run."
+          },
+          {
+            "question": "Why does Slope Rider get harder over time?",
+            "answer": "As you survive longer, the pace and obstacle pressure ramp up, which makes late runs feel much more intense than the start. Staying centered and using small steering taps helps you keep control when the slope gets chaotic."
+          }
+        ]
+      },
+      "content": "# Slope Rider – Free Online Sledding Game\n\n![Slope Rider gameplay - sled racing downhill through winter obstacles](/game/slope-rider.webp)\n\nSlope Rider is a winter-themed endless runner where your sled races downhill automatically—and you survive by making clean left-right decisions and perfectly timed jumps. In Slope Rider, the calm opening lasts seconds. Then the slope starts throwing trees, boulders, rolling snowballs, and sudden pits that end runs instantly.\n\nIf you enjoy fast arcade games that reward focus and rhythm, Slope Rider delivers the pure “one more run” loop: quick restarts, rising speed, and personal-best chasing.\n\n## Slope Rider Gameplay Loop: What You Do Every Run\n\nEvery run is about reading the lane ahead and staying smooth as the game speeds up.\n\n- The sled auto-moves downhill and pressure increases fast.\n- One over-correction can turn into a crash.\n- Gift boxes add risk/reward: grab them for unlocks, or skip them to protect your run.\n\n## Controls & Movement (Keyboard)\n\nSlope Rider keeps inputs simple so the challenge stays on timing.\n\n- Steer: Left/Right Arrow (or A/D)\n- Jump: Up Arrow (or W)\n- If available: Space may also jump\n\n## Slope Rider Obstacles & Hazards to Watch For\n\nDifferent runs can throw different patterns at you, but the danger types stay consistent:\n\n- Trees and lane blockers\n- Ice-capped boulders and rocks\n- Rolling snowballs and sudden moving hazards\n- Pits, holes, and gaps that require clean jumps\n\n## Gift Boxes, Sleds, and Smart Risk Management\n\nGift boxes unlock new sleds, but chasing every box is how most runs end.\n\n- Take boxes only when your line is stable\n- Skip boxes placed near pits or tight obstacle clusters\n- Treat unlocks as long-term progress, not a must-grab every run\n\n## Tips to Go Further\n\nA few habits make a big difference once the speed ramps up in Slope Rider:\n\n- Stay centered whenever the track allows it\n- Look ahead instead of staring at the sled\n- Jump late and clean; early jumps often drift you into the next hazard\n- Use tiny steering taps to avoid over-correcting at speed\n- When in doubt, protect the run over a risky gift box\n\n## What Players Say\n\n- \"It's simple to learn but incredibly challenging to master\"\n- \"Beautiful graphics and addictive gameplay. Slope Rider is fantastic!\"\n- \"I love this game my score is 100000\"\n\n## Similar Games Worth Trying After Slope Rider\n\nIf you want more quick-retry arcade runs and high-speed dodging, these are worth a try:\n\n- [Snow Rider 3D](/snow-rider-3d/): winter dodging with quick runs and constant hazards\n- [Moto Rider 3D](/moto-rider-3d/): first-person bike riding and fast reaction passes\n- [Traffic Rider](/): the classic first-person bike experience on this site\n"
+    },
     "snow-rider-3d": {
       "data": {
         "title": "Snow Rider 3D: Ultimate Alpine Sledding",
