@@ -41,6 +41,12 @@
       "title": "Slope Rider",
       "image": "/game/slope-rider-icon.webp",
       "url": "/slope-rider/"
+    },
+    {
+      "id": "blocky-rider",
+      "title": "Blocky Rider",
+      "image": "/game/blocky-rider-icon.webp",
+      "url": "/blocky-rider/"
     }
   ]
 }
