@@ -47,6 +47,12 @@
       "title": "Blocky Rider",
       "image": "/game/blocky-rider-icon.webp",
       "url": "/blocky-rider/"
+    },
+    {
+      "id": "doom-rider",
+      "title": "Doom Rider",
+      "image": "/game/doom-rider-icon.webp",
+      "url": "/doom-rider/"
     }
   ]
 }

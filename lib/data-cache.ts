@@ -93,6 +93,93 @@ export const postsData: Record<string, Record<string, { data: Record<string, unk
       },
       "content": "# Blocky Rider – Free Online Motorcycle Game\n\n![Blocky Rider gameplay - voxel motorcycle weaving through city traffic](/game/blocky-rider.webp)\n\nBlocky Rider is a voxel-style motorcycle traffic game where the road never stays polite for long. Cars switch lanes at the worst possible moment, buses block your escape route, and one “I can fit” decision can end the run instantly.\n\nIf you like games that are simple to control but tense at speed, Blocky Rider hits that perfect loop: quick restarts, personal-best chasing, and the kind of run where you hear yourself think, *don’t clip that mirror…* Then you do.\n\n## What Makes Blocky Rider Feel Hard (In a Good Way)\n\nBlocky Rider doesn’t lean on grindy upgrades. The challenge is the traffic itself:\n\n- Lanes shift unexpectedly, and chain reactions happen when vehicles brake and swerve.\n- Your speed is your score, but speed also steals your reaction time.\n- A better camera angle can literally be a higher score—switch views and commit to the one that shows you the most road.\n\nThat “pure skill” setup is why players describe it in the simplest way possible: “its fun” and “this game is the best”.\n\n## Blocky Rider Game Modes (Race, Demolition, City)\n\n### Race Mode: Survive for Distance\n\nIn Blocky Rider, Race Mode is the classic “how far can you go” challenge. You’re dodging traffic, reading gaps early, and trying to keep pace without forcing moves. Distance is the core score, and longer survival usually snowballs into higher pressure.\n\n### Demolition Mode: Crash on Purpose\n\nIn Blocky Rider, Demolition flips the rules. Instead of avoiding cars, you hunt them. Big hits and multi-car pileups score best, but head-on impacts can kill your momentum. Approach from the side when you can and stay moving through the chaos.\n\n### City Mode: Practice Without Punishment\n\nCity Mode is where Blocky Rider becomes a training tool. No timer, no “run is over” stress—just free driving to learn handling, test bikes, and explore ramps and open areas (many versions include an airport section that’s perfect for practice).\n\n## Controls, Camera, and “Small Taps” Driving\n\nBlocky Rider is easy to pick up:\n\n- Accelerate: W / Up Arrow\n- Brake: S / Down Arrow\n- Steer: A / D or Left / Right Arrow\n- Camera: C\n\nThe skill is *how* you use those inputs. At high speed, big steering swings cause over-corrections. Small taps keep your line clean and your options open.\n\n## Bikes, Coins, and Unlocks\n\nMost versions of Blocky Rider include three bikes you unlock over time:\n\n- Cross: flexible and friendly when you’re still learning traffic gaps\n- Superbike: built for speed, better when you can hold a stable line\n- Police: heavier, often feels more stable for demolition-style impacts\n\nCoins on the road feed progression, and distance milestones commonly unlock extra depth:\n\n- Wheelie unlocks around 2 km total riding in many builds\n- Handbrake unlocks around 5 km in many builds\n\n## Tips That Actually Add Distance\n\n- Pulse the throttle in dense traffic instead of holding full acceleration.\n- In Blocky Rider, leave a buffer. The space in front of you is reaction time, not “wasted road”.\n- Use City Mode to learn where ramps launch you and how your bike lands.\n- In Demolition, don’t stop after one hit—chain hits are where the score explodes.\n- Switch camera views and keep the one that lets you read lane changes earlier.\n\n## Similar Rider Games on This Site\n\nIf you want more fast reaction riding after Blocky Rider, these fit the same “one more run” vibe:\n\n- [Moto Rider 3D](/moto-rider-3d/): open exploration with first-person speed\n- [Traffic Rider](/): first-person highway riding with a classic loop\n- [Sky Riders](/sky-riders/): clean lines, quick resets, and high-speed focus\n"
     },
+    "doom-rider": {
+      "data": {
+        "title": "Doom Rider - Free Online Hell Racing Game",
+        "name": "Doom Rider",
+        "description": "Play Doom Rider online for free in your browser. Master one-button drifting, survive five deadly underworld zones, and battle skeleton bosses - no download.",
+        "gameSrc": "https://trafficroad.io/doom-rider.embed",
+        "features": [
+          {
+            "title": "One-Button Drift Combat",
+            "description": "Doom Rider turns a single input into steering, drifting, dodging, and counterattacking. It feels simple for five seconds, then brutally demanding.",
+            "icon": "Zap"
+          },
+          {
+            "title": "Five Deadly Zones",
+            "description": "Most modern Doom Rider builds push you through five escalating underworld areas packed with traps, sharp turns, and pressure-heavy set pieces.",
+            "icon": "Flame"
+          },
+          {
+            "title": "Skeleton Boss Battles",
+            "description": "This is not just lane-dodging. Doom Rider mixes survival racing with boss fights that force you to drift through projectiles and punish sloppy timing.",
+            "icon": "Skull"
+          },
+          {
+            "title": "Checkpoint-Driven Retries",
+            "description": "Quick resets and checkpoint pressure create the classic 'one more run' loop. Every mistake teaches you a cleaner line for the next attempt.",
+            "icon": "RotateCw"
+          }
+        ],
+        "steps": [
+          {
+            "title": "Learn the Doom Rider Controls",
+            "items": [
+              "Click or tap to change direction",
+              "Hold the button to drift through tight turns",
+              "Release to recover your main line and stabilize the bike"
+            ]
+          },
+          {
+            "title": "Read the Road Early",
+            "items": [
+              "Look ahead for spikes, fire wheels, bombs, and collapsing lanes",
+              "Do not drift constantly - over-drifting makes Doom Rider harder to control",
+              "Treat every boss phase like pattern recognition, not raw aggression"
+            ]
+          },
+          {
+            "title": "Play for Survival First",
+            "items": [
+              "Protect momentum, but never force a risky correction",
+              "Use checkpoints as learning milestones rather than panic points",
+              "When the screen gets chaotic, choose the safe line and live for the next section"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "question": "What is Doom Rider?",
+            "answer": "Doom Rider is a browser-based motorcycle action game where you drift through a cursed underworld, avoid traps, and survive skeleton-filled boss encounters using one-button controls."
+          },
+          {
+            "question": "How do the Doom Rider controls work?",
+            "answer": "Most versions use a one-button setup: click or tap to change direction, hold to drift, and release to return to your stable path. The controls are easy to understand but hard to master at speed."
+          },
+          {
+            "question": "Is Doom Rider just a racing game?",
+            "answer": "Not really. Doom Rider mixes racing, drifting, survival, and combat. You are not only steering through hazards - you are also dealing with bombs, enemy patterns, and skeleton boss fights."
+          },
+          {
+            "question": "How many zones are in Doom Rider?",
+            "answer": "Modern HTML5 versions commonly describe Doom Rider as having five deadly zones. The exact presentation can vary slightly by portal, but the five-zone structure is repeated across multiple mirrors."
+          },
+          {
+            "question": "Can I play Doom Rider on mobile?",
+            "answer": "Many modern Doom Rider mirrors support browser play on desktop, tablet, and mobile, but some legacy versions - especially the older Y8 listing - are desktop-only. If you want the cleanest control, desktop is still the best choice."
+          },
+          {
+            "question": "Is this the same Doom Rider that was on Y8?",
+            "answer": "The search term covers both an older 2007 Flash-era Doom Rider on Y8 and newer HTML5 mirror versions. The game on this page follows the modern browser-play format while preserving the same underworld racing fantasy."
+          },
+          {
+            "question": "What is the best Doom Rider strategy for beginners?",
+            "answer": "Use drift only when you need it, watch for repeating hazard patterns, and stop trying to 'save' every bad line. In Doom Rider, a calm correction usually beats a flashy one."
+          }
+        ]
+      },
+      "content": "# Doom Rider - Burn Through the Bones Online\n\nDoom Rider is the kind of browser game that looks straightforward until the first real corner shows up. One button. One flaming bike. One wrong click, and the underworld sends you straight back to the checkpoint.\n\nThat is the whole hook of the **Doom Rider game**. It strips control down to the bare minimum, then builds chaos on top of it: skeleton mobs, fire traps, spike-lined turns, boss projectiles, and that constant feeling that the road is half a second faster than your brain.\n\n## What Makes Doom Rider Different\n\nMost bike games ask you to steer, brake, and upgrade. **Doom Rider** asks something meaner: can you stay calm when the screen turns hostile?\n\n- The control scheme is tiny, but the decision-making is not.\n- Drifting is both your survival tool and your biggest risk.\n- Boss fights force you to think about timing, not just speed.\n- Quick retries make every failed section feel like unfinished business.\n\nThat is why the language around **Doom Rider online** stays so consistent across mirror sites: easy to learn, brutal to master, and weirdly hard to stop replaying.\n\n## Doom Rider Gameplay: One Button, Real Pressure\n\n![Doom Rider gameplay - flaming motorcycle racing through the underworld](/game/doom-rider.webp)\n\nIn **Doom Rider**, your input usually follows the same rhythm:\n\n- Click or tap to change direction.\n- Hold to drift through sharper angles.\n- Release to settle the bike and re-center your line.\n\nThe interesting part is what the game does with that simplicity. You are not just tracing corners. You are threading through bombs, reading incoming trap patterns, and choosing when to stay aggressive versus when to protect the run.\n\nThe best **Doom Rider gameplay** sessions feel almost musical. Drift, release, straighten, survive. Miss the beat, and the game punishes you instantly.\n\n## Five Zones, Skeleton Bosses, and Legacy Search Intent\n\nThe modern browser version of **Doom Rider** is usually described as a five-zone underworld ride with escalating danger, while the older Y8 listing preserves a much earlier Flash-era version of the same name. That split matters for SEO and for players searching the game today.\n\nIf you searched **Doom Rider Y8**, you are probably looking for the older checkpoint race through an undead underworld. If you searched **Doom Rider unblocked** or **play Doom Rider online**, you are more likely expecting the newer HTML5-style build with:\n\n- five deadly zones,\n- skeleton bosses,\n- land, sea, and sky sections,\n- and a faster, more combat-heavy rhythm.\n\nBoth versions share the same core fantasy: outrun the curse, hit the next checkpoint, and do not let the skeletons close the gap.\n\n## How to Play Doom Rider Without Throwing Runs Away\n\n### 1. Stop Drifting All the Time\n\nNew players often overuse drift because it feels powerful. In practice, constant drifting makes **Doom Rider** less stable. Save it for real corners, trap funnels, or boss pressure windows.\n\n### 2. Read the Hazard Pattern, Not Just the Bike\n\nIf you only watch your motorcycle, you are already late. Look ahead for bombs, glowing danger cues, spikes, and narrow exits. The game rewards anticipation more than last-second heroics.\n\n### 3. Treat Boss Fights Like Pattern Checks\n\nThe boss encounters in **Doom Rider** are not pure reflex spam. They are closer to timing exams. Stay alive first, learn the attack rhythm second, and only then start pushing for cleaner counters.\n\n### 4. Use Checkpoints the Right Way\n\nCheckpoints are not there to let you play sloppy. They are there to help you lock in one dangerous segment at a time. Think in chunks: survive this turn, then this trap line, then this boss phase.\n\n## Doom Rider Tips for Higher Survival\n\nThese are the tips that matter more than generic hype:\n\n- Keep your corrections small. Big panic swings usually create the next crash.\n- Drift late rather than early when the line is uncertain.\n- If a section looks messy, choose the boring safe route.\n- Learn the visual language: fire wheels, spikes, bombs, and glowing road warnings all telegraph danger.\n- In **Doom Rider**, surviving one more section is often worth more than gambling for a stylish line.\n\n## Why Doom Rider Still Gets Clicks\n\nThere are prettier games. There are deeper games. But **Doom Rider online free** still works because the fantasy is immediate: flaming motorcycle, undead pressure, no fluff, go.\n\nIt also lands in a sweet spot for short-session play:\n\n- instant browser launch,\n- fast failure loops,\n- high replay tension,\n- and enough boss/trap variety to make improvement feel real.\n\nThat makes the **Doom Rider game** a good fit for players who like `Traffic Rider`, `Blocky Rider`, or `Slope Rider`, but want something darker, harsher, and more arcade-combat driven.\n\n## Similar Rider Games on This Site\n\nIf Doom Rider's underworld chaos clicks for you, try these next:\n\n- [Blocky Rider](/blocky-rider/): cleaner traffic reading with a more open arcade structure\n- [Slope Rider](/slope-rider/): another fast-restart game where timing matters more than complexity\n- [Sky Riders](/sky-riders/): precision track riding with high-speed pressure\n- [Traffic Rider](/): the classic first-person highway experience\n\n## Final Take on Doom Rider\n\n**Doom Rider** succeeds because it never pretends to be relaxing. It gives you one control, throws you into a cursed highway, and asks whether your hands can keep up with your eyes.\n\nIf that sounds like your kind of challenge, hit play. The underworld is already moving.\n"
+    },
     "moto-rider-3d": {
       "data": {
         "title": "Moto Rider 3D: Open-World First-Person Motorcycle Adventure",
